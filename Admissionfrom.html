@@ -1,0 +1,134 @@
+<html>
+<title>Online Admission From</title>
+<script>
+function greetingsmsg()
+{
+ fn=document.form1.fname.value;
+ ln=document.form1.lname.value;
+ ele=document.getElementsByName('sex');
+
+for(i=0;i<ele.length;i++)
+{
+ if(ele[i].checked)
+  {
+   sx=ele[i].value;
+   }
+
+}
+if(sx=="Male")
+{
+alert("Hello Mr."+" "+fn+" "+ln+"Your application is submitted successfully");
+}
+ele1=document.getElementsByName('Maritalstatus');
+for(i=0;i<ele.length;i++)
+{
+ if(ele1[i].checked)
+  {
+   ms=ele1[i].value;
+   }
+}
+if(sx=="Female" && ms=="Married" )
+{
+alert("Hello Mrs."+" "+fn+" "+ln+" Your application is submitted successfully");
+}
+else if(sx=="Female" && ms=="Unmarried")
+{
+alert("Hello Miss."+" "+fn+" "+ln+" Your application is submitted successfully");
+}
+}
+</script>
+
+<body style="background-color: #E0F8C7;">
+	<div align="center">	
+	<div id="frm1" align="left" style="border:2px solid #00008B;border-radius: 15px; padding: 5px;">
+<h1 style="text-align: center;"><img src="Flogo1.png" width="70px" height="70px" align="left">Youth Computer Training Centre</h1>
+<h2 align=center>Admission From</h2>
+<hr color=#00008B>
+<form name=form1>
+Enter Frist Name:-
+<input type=text  name=fname value="">
+<br><br>
+Enter Last Name:-
+<input type=text name=lname value="">
+<br><br>
+<label>Father's Name :</label>&nbsp<input type="text" name="fn" value="" size="30"><br><br>
+Address:-<textarea rows=7   cols=30></textarea>
+<br><br>
+Date of Birth:-<input type="date">
+<br><br>
+Sex:-
+<br>
+<input type=radio name="sex" value="Male">Male
+<input type=radio name="sex" value="Female">Female
+<br><br>
+Marital status:-
+<br>
+<input type=radio name="Maritalstatus" value="Married">Married
+<input type=radio name="Maritalstatus" value="Unmarried">Unmarried
+<br><br>
+<label>Email:<input type="email" name="email" placeholder="your email" required>
+</label>
+<br><br>
+<label>Password:<input type="password" name="password" placeholder="your password" pattern="{5,10}" required title="please enter password of length 5 to 10" >
+</label>
+<br><br>
+Telephone Number: <input type="tel" name="telno">
+<br>
+ <br>
+  
+Select a file(IMG): <input type="file" name="reference"> 
+<br>
+  <br>		
+
+
+Education Qualification
+<br><br>
+<select>
+<option>Diploma</option>
+<option>Secondery</option>
+<option>HS</option>
+<option>UG</option>
+<option>PG</option>
+<option>Others</option>
+</select>
+<br><br>
+<label>Course applied For</label><br>
+	<select>
+		<option>CITA</option>
+		<option>DITA</option>
+		<option>ADITA</option>
+		<option>CFAS</option>
+		<option>DFAS</option>
+		<option>CDTP</option>
+		<option>DDTP</option>
+		<option>CCAD</option>
+		<option>CBM</option>
+		<option>DMAVE</option>
+		<option>CCHM</option>
+		<option>DCHM</option>
+	</select><br><br>
+Search Things about BYCTC: <input type="search" name="thing">
+<br>
+<br>
+Select a time: <input type="time" name="cur_time"> 
+<br>
+<br>
+ 
+Select a week: <input type="week" name="weekYear">
+ <br> <br>
+        
+Add your homepage: <input type="url" name="homepage">
+<br>
+<br>
+<label>I agree to the terms and conditions
+<Input type="checkbox" name="check">
+</label>
+<br>
+<input type=button name=b1 value="Submit" onclick="greetingsmsg()">
+</form>
+<a href="home.html">
+<img src="back.png" align= height=60px width=60px>
+</a>
+
+</body>
+</html>
